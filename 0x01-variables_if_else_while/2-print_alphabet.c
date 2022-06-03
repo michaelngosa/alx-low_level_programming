@@ -1,8 +1,8 @@
 #include <stdio.h>
 /*
- * main - print if the number is postive, zero, or negative
+ * main - prints the alphabet in lowercase
  * Description: using the main function
- * this program prints "Programming is positive, zero, or negative
+ * this program prints the alphabet in lowercase
  * Return: alway returns 0
  */
 int main(void)
