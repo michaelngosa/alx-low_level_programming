@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - entry
- * 
+ * main - entry 
  * this program prints and that piece of art is useful
- *
  * Return: Always 1 (Success)
  */
 int main(void)
