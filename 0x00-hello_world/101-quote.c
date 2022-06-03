@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
+ * this program prints and that piece of art is useful
+ * 
  * main - entry
+ * 
  * return: always 1 (success)
  */
 int main(void)
