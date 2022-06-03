@@ -1,8 +1,9 @@
 #include <stdio.h>
 /*
- * main - prints the alphabet in lowercase
+ * main - print if the number is postive, zero, or negative
+ * 
  * Description: using the main function
- * this program prints the alphabet in lowercase
+ * this program prints "the alphabet in lowercase
  * Return: alway returns 0
  */
 int main(void)
