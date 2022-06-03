@@ -11,7 +11,7 @@ int main(void)
 int i;
 for (i = 1; i <= 10; i++)
 {
-putchar(c);
+putchar(i);
 if (i != 10)
 {
 putchar(',');
