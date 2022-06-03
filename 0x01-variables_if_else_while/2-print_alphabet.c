@@ -2,7 +2,8 @@
 /*
  * main - entry point
  *
- *this program prints "Programming is positive, zero, or negative
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
  *
  * Return: alway returns 0
  */
