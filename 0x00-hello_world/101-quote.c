@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * this program prints and that piece of art is useful
- * 
  * main - entry
  * 
- * return: always 1 (success)
+ * this program prints and that piece of art is useful
+ *
+ * Return: Always 1 (Success)
  */
 int main(void)
 {
