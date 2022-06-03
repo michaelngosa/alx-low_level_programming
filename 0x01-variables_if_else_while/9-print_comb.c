@@ -9,7 +9,7 @@
 int main(void)
 {
 int i;
-for for (i = 10; i < 20; i++)
+for (i = 10; i < 20; i++)
 {
 putchar((i % 10) + '0');
 if (i != 20)
