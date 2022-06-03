@@ -2,9 +2,11 @@
 #include <unistd.h>
 
 /**
- * main - entry 
- * this program prints and that piece of art is useful
- * Return: Always 1 (Success)
+ * main - Entry piont
+ *
+ * prints this piece of art is useful
+ *
+ * Retures:Always 1 (success)
  */
 int main(void)
 {
