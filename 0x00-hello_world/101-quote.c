@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * main - Entry piont
+ * main - Entry point
  *
  * prints this piece of art is useful
  *
