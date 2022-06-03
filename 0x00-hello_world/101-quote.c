@@ -6,7 +6,7 @@
  *
  * prints this piece of art is useful
  *
- * Retures:Always 1 (success)
+ * Retures:Always 0 (success)
  */
 int main(void)
 {
