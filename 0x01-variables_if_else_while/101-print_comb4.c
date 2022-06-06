@@ -4,7 +4,7 @@
  *
  * Description: using the main function
  * This program prints all possible different combinations of three digits
- * return: always 0
+ * Return: alway returns 0
  */
 int main(void)
 {
@@ -32,5 +32,5 @@ putchar(' ');
 }
 }
 putchar('\n');
-return 0;
+return (0);
 }
