@@ -3,6 +3,7 @@
 /**
  * main - entry point
  *
+ * print_alphabet - prints alphabet
  * This program prints the alphabet, in lowercase, followed by a new line
  * Return: always 0
  */
