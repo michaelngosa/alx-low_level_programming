@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _islower - main function
- * c: character to compare
+ * _islower - Short description, single line
+ * @c: character to compare
  * Return: 1 if true, 0 if false
  */
 int _islower(int c)
