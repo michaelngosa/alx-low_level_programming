@@ -32,8 +32,8 @@ _putchar(' ');
 }
 else
 {
-_putchar ((c /10) + '0');
-_putchar ((c % 10) + '0');
+_putchar ((k /10) + '0');
+_putchar ((k % 10) + '0');
 if (j <9)
 {
 _putchar(',');
