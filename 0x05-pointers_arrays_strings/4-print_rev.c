@@ -8,13 +8,16 @@
 
 void print_rev(char *s)
 {
-	int index;
+	int count = 0;
 
-	/*finds the length of string without null character*/
-	for (index = 0; s[index] != '\0'; ++index)
-		;
-	/*print char from the last index as you decrement*/
-	for (--index; index >= 0; --index)
-		_putchar(s[index]);
+	while (count >= 0)
+	{
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+
+	for (count--; count >= 0; count--)
+		_putchar(s[count]);
 	_putchar('\n');
 }
