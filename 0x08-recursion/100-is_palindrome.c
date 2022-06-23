@@ -1,43 +1,52 @@
 #include "main.h"
 
+int _strlen_recursion(char *s);
+int _comparission(char *s, int legth);
+
 /**
- * _strlen_recursion - returns the length of a string.
- * @s: string
- * Return: the length of a string.
+ * is_palindrome - function to know when a string is palindrome or not..
+ * @s: is a pointer to a string.
+ * Return: Returns _comparission parameters.
  */
-int _strlen_recursion(char *s)
+
+int is_palindrome(char *s)
 {
-	if (*s == '\0')
-		return (0);
-	else
-		return (1 + _strlen_recursion(s + 1));
+int len = _strlen_recursion(s);
+if (len == 1)
+	return (1);
+else if (len < 0)
+	return (0);
+else
+	return (_comparission(s, len));
 }
 
 /**
- * comparator - compares each character of the string.
- * @s: string
- * @n1: smallest iterator.
- * @n2: biggest iterator.
- * Return: .
+ * _strlen_recursion - Function for counting size of a string.
+ * @s: points to the string.
+ * Return: Returns the size of the string.
  */
-int comparator(char *s, int n1, int n2)
+
+int _strlen_recursion(char *s)
 {
-	if (*(s + n1) == *(s + n2))
-	{
-		if (n1 == n2 || n1 == n2 + 1)
-			return (1);
-		return (0 + comparator(s, n1 + 1, n2 - 1));
-	}
+if (*s == 0)
 	return (0);
 
+return (1 + _strlen_recursion(s + 1));
+}
+
 /**
- * is_palindrome - detects if a string is a palindrome.
- * @s: string.
- * Return: 1 if s is a palindrome, 0 if not.
+ * _comparission - Function that compares initial index and last index.
+ * @s: points to the string.
+ * @length: is the size of the string.
+ * Return: Returns increased s and decreased length
  */
-int is_palindrome(char *s)
+
+int _comparission(char *s, int length)
 {
-	if (*s == '\0')
-		return (1);
-	return (comparator(s, 0, _strlen_recursion(s) - 1));
+if (length <= 1)
+	return (1);
+else if (*s == s[length - 1])
+	return (_comparission(++s, ((length - 1) - 1)));
+else
+	return (0);
 }
