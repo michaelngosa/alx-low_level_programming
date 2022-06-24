@@ -3,6 +3,7 @@
 #include <ctype.h>
 
 /**
+ * _isnumber - checks if string is a number
  * main - prints the function.
  * @s: string
  * Return: On success 1.
