@@ -1,43 +1,40 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
  * argstostr - concatenate all arguments of your program with newline
  * @ac: argument count
  * @av: double pointer to array of strings passed to main
- * Return: Null if fail, else return pointer to new string
+ * Return: NULL memory allocation fails, ac is 0 or av is NULL,
+ * otherwise return s pointer to the new string
  */
-
 char *argstostr(int ac, char **av)
 {
-	char *a, *retp;
-	int i, j, total;
+	char *cat, *chr;
+	int arg, size;
 
-	if (ac == 0 || av == NULL)
+	if (!ac || !av)
 		return (NULL);
 
-	for (i = 0, total = 0; i < ac; i++)
+	for (arg = 0, size = 1; arg < ac; ++arg, ++size)
 	{
-		for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
+		for (chr = av[arg]; *chr; ++chr, ++size)
 			;
-		total++;
 	}
 
-	a = malloc(total * sizeof(char));
-	if (a == NULL)
+	cat = (char *) malloc(sizeof(char) * size);
+
+	if (!cat)
 		return (NULL);
 
-	retp = a;
-	for (i = 0; i < ac; i++)
+	for (arg = 0, size = 0; arg < ac; ++arg, ++size)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			*a = av[i][j];
-			a++;
-		}
-		*a = '\n';
-		a++;
+		for (chr = av[arg]; *chr; ++chr, ++size)
+			cat[size] = *chr;
+		cat[size] = '\n';
 	}
 
-	return (retp);
+	cat[size] = '\0';
+	return (cat);
 }
