@@ -19,10 +19,12 @@ char *_strdup(char *str)
 								;
 
 	a = malloc(i * sizeof(*a) + 1);
-	if (a == NULL)										return (NULL);
+	if (a == NULL)										
+		return (NULL);
 	
 	for (c = 0; c < i; c++)
 		a[c] = str[c];
 	a[c] = '\0';
-											return (a);
+	
+	return (a);
 }
