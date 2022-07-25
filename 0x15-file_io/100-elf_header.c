@@ -295,7 +295,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		free(header);
 		close_elf(o);
-		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1])
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
 
