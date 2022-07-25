@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _strlen - finds the length of a string
- * @str: pointer to the string
+ * create_file - creates a file
+ * @filename: filename.
+ * @text_content: content writed in the file.
  *
- * Return: length of the string
+ * Return: 1 if it success. -1 if it fails.
  */
 size_t _strlen(char *str)
 {
