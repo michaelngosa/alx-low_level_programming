@@ -27,7 +27,7 @@ void check_elf(unsigned char *e_ident)
 {
 	int index;
 
-	for (index = 0; index < 4; index++)
+		for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
 			e_ident[index] != 'E' &&
@@ -254,34 +254,32 @@ void close_elf(int elf)
 	if (close(elf) == -1)
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %d\n", elf);
+				"Error: Can't close fd %d\n", elf);
 		exit(98);
 	}
-
 }
 
 /**
  * main - Displays the information contained in the
- * 	ELF header at the start of an ELF file.
+ * ELF header at the start of an ELF file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
  *
  * Description: If the file is not an ELF File or
- * 	the function fails - exit code 98.
+ * the function fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	nt o, r;
+	int o, r;
 
 	o = open(argv[1], O_RDONLY);
 	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
-
 	}
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
@@ -314,3 +312,4 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	close_elf(o);
 	return (0);
 }
+	
