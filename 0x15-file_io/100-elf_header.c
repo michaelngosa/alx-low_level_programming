@@ -214,7 +214,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		break;
 	case ET_CORE:
 		printf("CORE (Core file)\n");
-		breaks;
+		break;
 	default:
 		printf("<unknown: %x>\n", e_type);
 	}
